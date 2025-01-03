@@ -6,18 +6,24 @@
     <title>Пример сайта</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to bottom, #ffefba, #ffffff);
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
         .container {
-            width: 80%;
+            width: 90%;
             max-width: 1200px;
-            border: 1px solid #000;
+            border: 1px solid #ddd;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
             display: grid;
             grid-template-areas: 
                 "header header"
@@ -26,29 +32,64 @@
                 "footer footer";
             grid-template-columns: 1fr 1fr;
             grid-gap: 20px;
+            padding: 20px;
         }
         .header {
             grid-area: header;
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
             font-weight: bold;
             padding: 20px;
+            background: #007BFF;
+            color: #fff;
+            border-radius: 8px;
         }
         .image {
             grid-area: image;
             text-align: center;
             padding: 20px;
-            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ddd;
         }
         .description {
             grid-area: description;
             padding: 20px;
-            border: 1px solid #ccc;
+            font-size: 1.1em;
+            line-height: 1.6;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
         }
-        .features {
+        .benefits {
             grid-area: features;
             padding: 20px;
-            border: 1px solid #ccc;
+            background: #eef6ff;
+            border-radius: 8px;
+        }
+        .benefits h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits ul li {
+            padding: 5px 0;
+            position: relative;
+        }
+        .benefits ul li:before {
+            content: "✔";
+            color: #007BFF;
+            font-weight: bold;
+            margin-right: 10px;
         }
         .button {
             grid-area: button;
@@ -57,11 +98,15 @@
         }
         .button a {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 15px 30px;
             background-color: #007BFF;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .button a:hover {
             background-color: #0056b3;
@@ -69,33 +114,32 @@
         .footer {
             grid-area: footer;
             text-align: center;
-            font-size: 0.8em;
+            font-size: 0.9em;
             padding: 10px;
-            border-top: 1px solid #ccc;
+            color: #666;
+            border-top: 1px solid #ddd;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="header">Лиза Кривицкая</div>
         <div class="image">
-    <img src="photo_2025-01-03_20-02-47.jpg" style="max-width: 100%; height: auto;">
-    </div>
-        <div class="description">Лиза Кривицкая(больше известная как жирная свинка) - моя соседка и соответственно подруга. Она всех понимает и способна поддержать в трудную минуту. Любимое занятие это съебывать с скучных уроков, таких как искусство, ВОв и так далее</div>
-        </section>
-
+            <img src="photo_2025-01-03_20-02-47.jpg" alt="Фото Лизы Кривицкой">
+        </div>
+        <div class="description">Лиза Кривицкая (больше известная как жирная свинка) - моя соседка и, соответственно, подруга. Она всех понимает и способна поддержать в трудную минуту. Любимое занятие - съёбывать с скучных уроков, таких как искусство, ВОв и так далее.</div>
         <section class="benefits">
             <h2>Чем же она хороша?</h2>
             <ul>
                 <li>она милашка</li>
-                <li>смешно хрюкают.</li>
-                <li>это лиза кривицкая.</li>
-                <li>красивая.</li>
-                <li>чистая.</li>
+                <li>смешно хрюкает</li>
+                <li>это Лиза Кривицкая</li>
+                <li>красивая</li>
+                <li>чистая</li>
                 <li>ну и вообще красава</li>
             </ul>
         </section>
-    </div>
         <div class="button">
             <a href="https://t.me/lizkakakaka" target="_blank">Её тгк</a>
         </div>
